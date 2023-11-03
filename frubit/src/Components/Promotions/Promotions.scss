@@ -1,0 +1,53 @@
+.promotions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    height: 40vh;
+    margin-bottom: 5rem;
+    img{
+        max-height: 400px;
+        max-width: 400px;
+        object-fit: contain;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        border: none;
+        .button1{
+            color: var(--background-white);
+            background-color: var(--text-violet);
+            border-radius: 3rem;
+            padding: 0.5rem 0.5rem;
+            z-index: 10;
+            margin-right: 300px;
+            margin-top: 100px;
+            &:hover{
+                color: var(--text-violet);
+                background: var(--main-green); 
+            }
+            &:active{
+                background: var(--background-white);
+            }
+        }
+        .button2{
+            color: var(--background-white);
+            background-color: var(--text-violet);
+            border-radius: 3rem;
+            padding: 0.5rem 0.5rem;
+            z-index: 10;
+            margin-left: 300px;
+            margin-top: 100px;
+            &:hover{
+                color: var(--text-violet);
+                background: var(--main-green); 
+            }
+            &:active{
+                background: var(--background-white);
+            }
+        }
+        
+    }
+}
