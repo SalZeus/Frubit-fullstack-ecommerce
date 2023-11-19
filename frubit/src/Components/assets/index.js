@@ -10,6 +10,7 @@ import shelf from "./mostrario.png";
 import board from "./pizarra.jpg";
 import promotion from "./promotion.jpeg";
 import trophy from "./trofeo.jpg";
+import frubitlogo2 from "./frubitlogo2.png";
  
 
 const images ={
@@ -25,6 +26,7 @@ const images ={
     board,
     promotion,
     trophy,
+    frubitlogo2
 };
 
 export default images;

@@ -4,6 +4,7 @@ import images from "../assets/index";
 import {AiOutlineUser, AiTwotoneShopping, AiFillBell} from "react-icons/ai";
 import {FaLocationDot} from "react-icons/fa6"
 import { useState } from "react";
+import {Link} from "react-router-dom";
 
 const Header = () => {
 
@@ -23,8 +24,8 @@ const Header = () => {
     hidden:{
       rotate: 720,
       scale: 20,
-      x: 500,
-      y: 500,
+      x: "50vw",
+      y: "50vh",
       opacity: 0.9,
     },
     visible:{
@@ -51,15 +52,18 @@ const Header = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.img src={images.frubitlogopng} alt="frubit logo" 
-        
+        <Link to="/">
+        <motion.img src={images.frubitlogo2} alt="frubit logo" 
         />
+        </Link>
+        
       </motion.div>
 
-
-      <motion.h1
-      
-      >FruBit</motion.h1>
+      <Link to="/">
+        <motion.h1
+        
+        >FruBit</motion.h1>
+      </Link>
       <motion.div className="address"
       
       >

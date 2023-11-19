@@ -19,10 +19,13 @@
             height: 50px;
         }
     }
-    h1{
-        color: var(--text-violet);
-        font-family: var(--grand);
-        font-size: 2rem;
+    a{
+        text-decoration: none;
+        h1{
+            color: var(--text-violet);
+            font-family: var(--grand);
+            font-size: 2rem;
+        }
     }
     .address{
         margin: 0 auto;
