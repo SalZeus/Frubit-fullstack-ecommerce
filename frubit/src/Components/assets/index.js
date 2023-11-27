@@ -11,7 +11,7 @@ import board from "./pizarra.jpg";
 import promotion from "./promotion.jpeg";
 import trophy from "./trofeo.jpg";
 import frubitlogo2 from "./frubitlogo2.png";
- 
+
 
 const images ={
     favicon,
@@ -28,5 +28,6 @@ const images ={
     trophy,
     frubitlogo2
 };
+
 
 export default images;

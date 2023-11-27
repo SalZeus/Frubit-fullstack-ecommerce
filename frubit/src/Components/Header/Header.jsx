@@ -5,8 +5,13 @@ import {AiOutlineUser, AiTwotoneShopping, AiFillBell} from "react-icons/ai";
 import {FaLocationDot} from "react-icons/fa6"
 import { useState } from "react";
 import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
 
-const Header = () => {
+
+const Header = ({ cartItems }) => {
+  Header.propTypes = {
+    cartItems: PropTypes.array.isRequired,
+  }; 
 
   const [menu, setMenu] = useState("shop")
 
@@ -89,24 +94,19 @@ const Header = () => {
       <motion.ul className="user-icons"
       
       >
-          <motion.li className="login"
-          
-          >
-            <button onClick={()=>{setMenu("log")}}>
-              {/* <AiOutlineUserAdd style={{height: "38px", width: "38px"}}/> */}
-              <AiOutlineUser style={{height: "30px", width: "30px"}}/>{menu==="log"?<hr></hr>:<></>}
-            </button>
-          </motion.li>
-          <motion.li className="cart"
-          
-          >
-          <button onClick={()=>{setMenu("shopCart")}}
-          
-          >
-            <AiTwotoneShopping style={{height: "30px", width: "30px"}}/>{menu==="shopCart"?<hr></hr>:<></>}
-            <div className="cart-counter">0</div>
+          <motion.li className="login">
+          <button onClick={() => setMenu("log")}>
+            <AiOutlineUser style={{ height: "30px", width: "30px" }} />
+            {menu === "log" ? <hr></hr> : <></>}
           </button>
-          </motion.li>
+        </motion.li>
+        <motion.li className="cart">
+          <button onClick={() => setMenu("shopCart")}>
+            <AiTwotoneShopping style={{ height: "30px", width: "30px" }} />
+            {menu === "shopCart" ? <hr></hr> : <></>}
+            <div className="cart-counter">{cartItems.length}</div>
+          </button>
+        </motion.li>
           <motion.li className="alerts"
           
           >
